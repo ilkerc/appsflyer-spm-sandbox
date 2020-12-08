@@ -78,6 +78,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36929876257FA64600BD7997 /* Build configuration list for PBXNativeTarget "appsflyer-spm-sandbox" */;
 			buildPhases = (
+				369298F0257FC09300BD7997 /* Fix AF SPM */,
 				3692985E257FA64400BD7997 /* Sources */,
 				3692985F257FA64400BD7997 /* Frameworks */,
 				36929860257FA64400BD7997 /* Resources */,
@@ -141,6 +142,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		369298F0257FC09300BD7997 /* Fix AF SPM */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Fix AF SPM";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/AppsFlyerLib.framework\"\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Plugins/AppsFlyerLib.framework\"\n\n## For Catalyst targets\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/AppsFlyerLib.framework\"\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Plugins/AppsFlyerLib.framework\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3692985E257FA64400BD7997 /* Sources */ = {
