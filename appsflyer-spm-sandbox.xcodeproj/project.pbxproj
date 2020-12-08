@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		3692986D257FA64400BD7997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3692986B257FA64400BD7997 /* Main.storyboard */; };
 		3692986F257FA64600BD7997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3692986E257FA64600BD7997 /* Assets.xcassets */; };
 		36929872257FA64600BD7997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36929870257FA64600BD7997 /* LaunchScreen.storyboard */; };
+		3692987C257FA68800BD7997 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 3692987B257FA68800BD7997 /* AppsFlyerLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3692986E257FA64600BD7997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36929871257FA64600BD7997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36929873257FA64600BD7997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36929879257FA65000BD7997 /* appsflyer-spm-sandbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "appsflyer-spm-sandbox.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3692987C257FA68800BD7997 /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 		36929864257FA64400BD7997 /* appsflyer-spm-sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				36929879257FA65000BD7997 /* appsflyer-spm-sandbox.entitlements */,
 				36929865257FA64400BD7997 /* AppDelegate.swift */,
 				36929867257FA64400BD7997 /* SceneDelegate.swift */,
 				36929869257FA64400BD7997 /* ViewController.swift */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = "appsflyer-spm-sandbox";
+			packageProductDependencies = (
+				3692987B257FA68800BD7997 /* AppsFlyerLib */,
+			);
 			productName = "appsflyer-spm-sandbox";
 			productReference = 36929862257FA64400BD7997 /* appsflyer-spm-sandbox.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 36929859257FA64400BD7997;
+			packageReferences = (
+				3692987A257FA68800BD7997 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			productRefGroup = 36929863257FA64400BD7997 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,14 +296,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "appsflyer-spm-sandbox/appsflyer-spm-sandbox.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4YW889C9G;
 				INFOPLIST_FILE = "appsflyer-spm-sandbox/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ou.appwise.appsflyer-spm-sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,14 +318,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "appsflyer-spm-sandbox/appsflyer-spm-sandbox.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4YW889C9G;
 				INFOPLIST_FILE = "appsflyer-spm-sandbox/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ou.appwise.appsflyer-spm-sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3692987A257FA68800BD7997 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3692987B257FA68800BD7997 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3692987A257FA68800BD7997 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3692985A257FA64400BD7997 /* Project object */;
 }
