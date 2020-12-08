@@ -13,7 +13,6 @@
 		3692986D257FA64400BD7997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3692986B257FA64400BD7997 /* Main.storyboard */; };
 		3692986F257FA64600BD7997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3692986E257FA64600BD7997 /* Assets.xcassets */; };
 		36929872257FA64600BD7997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36929870257FA64600BD7997 /* LaunchScreen.storyboard */; };
-		3692987C257FA68800BD7997 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 3692987B257FA68800BD7997 /* AppsFlyerLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3692987C257FA68800BD7997 /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +43,7 @@
 			children = (
 				36929864257FA64400BD7997 /* appsflyer-spm-sandbox */,
 				36929863257FA64400BD7997 /* Products */,
+				369298F6257FC2E900BD7997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +70,13 @@
 			path = "appsflyer-spm-sandbox";
 			sourceTree = "<group>";
 		};
+		369298F6257FC2E900BD7997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,7 +84,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36929876257FA64600BD7997 /* Build configuration list for PBXNativeTarget "appsflyer-spm-sandbox" */;
 			buildPhases = (
-				369298F0257FC09300BD7997 /* Fix AF SPM */,
 				3692985E257FA64400BD7997 /* Sources */,
 				3692985F257FA64400BD7997 /* Frameworks */,
 				36929860257FA64400BD7997 /* Resources */,
@@ -89,7 +94,6 @@
 			);
 			name = "appsflyer-spm-sandbox";
 			packageProductDependencies = (
-				3692987B257FA68800BD7997 /* AppsFlyerLib */,
 			);
 			productName = "appsflyer-spm-sandbox";
 			productReference = 36929862257FA64400BD7997 /* appsflyer-spm-sandbox.app */;
@@ -142,27 +146,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		369298F0257FC09300BD7997 /* Fix AF SPM */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Fix AF SPM";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/AppsFlyerLib.framework\"\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Plugins/AppsFlyerLib.framework\"\n\n## For Catalyst targets\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/AppsFlyerLib.framework\"\nrm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Plugins/AppsFlyerLib.framework\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3692985E257FA64400BD7997 /* Sources */ = {
@@ -390,14 +373,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3692987B257FA68800BD7997 /* AppsFlyerLib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3692987A257FA68800BD7997 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
-			productName = AppsFlyerLib;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3692985A257FA64400BD7997 /* Project object */;
 }
